@@ -190,7 +190,7 @@ namespace AsyncAwaitExercises.Tests
                     token: cts.Token));
 
             Assert.NotNull(exception);
-            Assert.IsType<TaskCanceledException>(exception);
+            Assert.IsType<OperationCanceledException>(exception);
             mockHttp.VerifyNoOutstandingExpectation();
         }
     }
